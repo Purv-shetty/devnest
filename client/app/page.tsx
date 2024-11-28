@@ -1,8 +1,5 @@
-import Hero from './components/hero'
-import CollaborationDemo from './components/collaboration-demo'
-import Features from './components/features'
-import Testimonials from './components/testimonials'
-import CallToAction from './components/call-to-action'
+import Hero from "./components/hero";
+
 
 export default function Home() {
   return (
