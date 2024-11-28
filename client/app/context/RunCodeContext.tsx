@@ -1,5 +1,6 @@
+"use client"
 import axiosInstance from "@/app/api"
-import { Language, RunContext as RunContextType } from "@/types/run"
+import { Language, RunContext as RunContextType } from "@/app/types/run"
 import langMap from "lang-map"
 import {
     ReactNode,

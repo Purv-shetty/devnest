@@ -1,13 +1,14 @@
 import FileSystem from "@/components/files/FileSystem"
-import { useFileStore } from "@/context/FileContext"
-import useWindowDimensions from "@/hooks/useWindowDimensions"
-import { File } from "@/types/file"
+
+import { File } from "@/app/types/file"
 import langMap from "lang-map"
 import { ChangeEvent, useRef } from "react"
 import { BiArchiveIn } from "react-icons/bi"
 import { LuDownload } from "react-icons/lu"
 import { TbFileUpload } from "react-icons/tb"
 import { v4 as uuidv4 } from "uuid"
+import { useFileStore } from "@/app/context/FileContext"
+import useWindowDimensions from "@/app/hooks/usewindowDimension"
 
 function FilesTab() {
     const {

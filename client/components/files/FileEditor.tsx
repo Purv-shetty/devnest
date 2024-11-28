@@ -1,5 +1,5 @@
-import { useFileStore } from "@/context/FileContext"
-import { FileName } from "@/types/file"
+import { useFileStore } from "@/app/context/FileContext"
+import { FileName } from "@/app/types/file"
 import { ChangeEvent, FormEvent, useState } from "react"
 import toast from "react-hot-toast"
 import { FaCheck } from "react-icons/fa6"

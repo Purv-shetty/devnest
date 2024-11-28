@@ -1,14 +1,15 @@
+"use client"
 import {
     File,
     FileContent,
     FileContext as FileContextType,
     FileId,
     FileName,
-} from "@/types/file"
-import { MessageEvent } from "@/types/socket"
-import { RemoteUser } from "@/types/user"
-import customMapping from "@/utils/customMapping"
-import initialFile from "@/utils/initialFile"
+} from "@/app/types/file"
+import { MessageEvent } from "@/app/types/socket"
+import { RemoteUser } from "@/app/types/user"
+import customMapping from "@/app/utils/customMapping"
+import initialFile from "@/app/utils/initialFile"
 import { saveAs } from "file-saver"
 import JSZip from "jszip"
 import langMap from "lang-map"
@@ -23,8 +24,9 @@ import {
 import { toast } from "react-hot-toast"
 import { v4 as uuidv4 } from "uuid"
 import { useAppContext } from "./AppContext"
-import { useSettings } from "./SettingContext"
 import { useSocket } from "./SocketContext"
+import { useSettings } from "./SettingContext"
+
 
 const FileContext = createContext<FileContextType | null>(null)
 

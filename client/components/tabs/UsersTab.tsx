@@ -1,13 +1,13 @@
 import Users from "@/components/common/Users"
-import { useAppContext } from "@/context/AppContext"
-import { useSocket } from "@/context/SocketContext"
-import useWindowDimensions from "@/hooks/useWindowDimensions"
-import { USER_STATUS } from "@/types/user"
+import { useAppContext } from "@/app/context/AppContext"
+import { useSocket } from "@/app/context/SocketContext"
+import { USER_STATUS } from "@/app/types/user"
 import toast from "react-hot-toast"
 import { GoSignOut } from "react-icons/go"
 import { IoShareOutline } from "react-icons/io5"
 import { LuCopy } from "react-icons/lu"
 import { useNavigate } from "react-router-dom"
+import useWindowDimensions from "@/app/hooks/usewindowDimension"
 
 function UsersTab() {
     const navigate = useNavigate()

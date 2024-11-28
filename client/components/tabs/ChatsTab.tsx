@@ -1,6 +1,7 @@
+import useWindowDimensions from "@/app/hooks/usewindowDimension"
 import ChatInput from "@/components/chats/ChatInput"
 import ChatList from "@/components/chats/ChatList"
-import useWindowDimensions from "@/hooks/useWindowDimensions"
+
 
 const ChatsTab = () => {
     const { tabHeight } = useWindowDimensions()

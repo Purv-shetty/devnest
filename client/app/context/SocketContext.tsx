@@ -1,10 +1,11 @@
-import { DrawingData } from "@/types/app"
+"use client"
+import { DrawingData } from "@/app/types/app"
 import {
     MessageEvent,
     SocketContext as SocketContextType,
     SocketId,
-} from "@/types/socket"
-import { RemoteUser, USER_STATUS, User } from "@/types/user"
+} from "@/app/types/socket"
+import { RemoteUser, USER_STATUS, User } from "@/app/types/user"
 import {
     ReactNode,
     createContext,
@@ -27,7 +28,7 @@ export const useSocket = (): SocketContextType => {
     return context
 }
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
+const BACKEND_URL = process.env.VITE_BACKEND_URL
 
 const SocketProvider = ({ children }: { children: ReactNode }) => {
     const {

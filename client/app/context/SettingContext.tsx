@@ -1,8 +1,9 @@
-import useLocalStorage from "@/hooks/useLocalStorage"
+"use client"
+import useLocalStorage from "@/app/hooks/useLocalStorage"
 import {
     Settings,
     SettingsContext as SettingsContextType,
-} from "@/types/setting"
+} from "@/app/types/setting"
 import {
     ReactNode,
     createContext,

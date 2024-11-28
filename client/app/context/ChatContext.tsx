@@ -1,5 +1,6 @@
-import { ChatContext as ChatContextType, ChatMessage } from "@/types/chat"
-import { MessageEvent } from "@/types/socket"
+"use client"
+import { ChatContext as ChatContextType, ChatMessage } from "@/app/types/chat"
+import { MessageEvent } from "@/app/types/socket"
 import {
     ReactNode,
     createContext,
@@ -8,7 +9,6 @@ import {
     useState,
 } from "react"
 import { useSocket } from "./SocketContext"
-
 const ChatContext = createContext<ChatContextType | null>(null)
 
 export const useChatRoom = (): ChatContextType => {

@@ -1,5 +1,5 @@
-import { useRunCode } from "@/context/RunCodeContext"
-import useWindowDimensions from "@/hooks/useWindowDimensions"
+import { useRunCode } from "@/app/context/RunCodeContext"
+import useWindowDimensions from "@/app/hooks/usewindowDimension"
 import { ChangeEvent } from "react"
 import toast from "react-hot-toast"
 import { LuCopy } from "react-icons/lu"

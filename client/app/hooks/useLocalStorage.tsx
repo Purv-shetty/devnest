@@ -1,3 +1,4 @@
+"use client"
 function useLocalStorage() {
     const setItem = (key: string, value: string) => {
         localStorage.setItem(key, value)

@@ -1,10 +1,10 @@
 import Select from "@/components/common/Select"
-import { useSettings } from "@/context/SettingContext"
-import useWindowDimensions from "@/hooks/useWindowDimensions"
-import { editorFonts } from "@/resources/Fonts"
-import { editorThemes } from "@/resources/Themes"
+import { useSettings } from "@/app/context/SettingContext"
+import { editorFonts } from "@/app/resources/Fonts"
+import { editorThemes } from "@/app/resources/Themes"
 import { langNames } from "@uiw/codemirror-extensions-langs"
 import { ChangeEvent, useEffect } from "react"
+import useWindowDimensions from "@/app/hooks/usewindowDimension"
 
 function SettingsTab() {
     const {

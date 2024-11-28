@@ -1,16 +1,19 @@
+"use client"
 import ChatsTab from "@/components/tabs/ChatsTab"
 import FilesTab from "@/components/tabs/FilesTab"
 import RunTab from "@/components/tabs/RunTab"
 import SettingsTab from "@/components/tabs/SettingsTab"
 import UsersTab from "@/components/tabs/UsersTab"
-import useWindowDimensions from "@/hooks/useWindowDimensions"
-import AITab from"@/components/tabs/AITab.tsx"
-import { TABS, TabContext as TabContextType } from "@/types/tab"
+
+
+import { TABS, TabContext as TabContextType } from "@/app/types/tab"
 import { ReactNode, createContext, useContext, useState } from "react"
 import { FaRobot } from "react-icons/fa6"
 import { IoSettingsOutline } from "react-icons/io5"
 import { LuFiles } from "react-icons/lu"
 import { PiChats, PiPlay, PiUsers } from "react-icons/pi"
+import useWindowDimensions from "../hooks/usewindowDimension"
+import AITab from "@/components/tabs/AITab"
 
 const TabContext = createContext<TabContextType | null>(null)
 

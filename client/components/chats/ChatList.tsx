@@ -1,5 +1,5 @@
-import { useAppContext } from "@/context/AppContext"
-import { useChatRoom } from "@/context/ChatContext"
+import { useAppContext } from "@/app/context/AppContext"
+import { useChatRoom } from "@/app/context/ChatContext"
 import { SyntheticEvent, useEffect, useRef } from "react"
 
 function ChatList() {

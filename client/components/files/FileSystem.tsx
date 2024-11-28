@@ -1,15 +1,16 @@
-import { useFileStore } from "@/context/FileContext"
-import { useTabs } from "@/context/TabContext"
-import useWindowDimensions from "@/hooks/useWindowDimensions"
-import { FileId, FileName } from "@/types/file"
-import { getIconClassName } from "@/utils/getIconClassName"
+import { useFileStore } from "@/app/context/FileContext"
+import { useTabs } from "@/app/context/TabContext"
+
+import { FileId, FileName } from "@/app/types/file"
+import { getIconClassName } from "@/app/utils/getIconClassName"
 import { Icon } from "@iconify/react"
 import { MouseEvent, useRef, useState } from "react"
 import { MdDelete } from "react-icons/md"
 import { PiPencilSimpleFill } from "react-icons/pi"
 import FileEditor from "./FileEditor"
-import { ACTIVITY_STATE } from "@/types/app"
-import { useAppContext } from "@/context/AppContext"
+import { ACTIVITY_STATE } from "@/app/types/app"
+import { useAppContext } from "@/app/context/AppContext"
+import useWindowDimensions from "@/app/hooks/usewindowDimension"
 
 function FileSystem() {
     const { files, currentFile, openFile, deleteFile, createFile } =
