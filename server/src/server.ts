@@ -73,9 +73,12 @@ app.post('/gemini/messages', async (req, res) => {
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "*", // Allow requests from any origin
+        origin: "*",
+        methods: ["GET", "POST"],
+        allowedHeaders: ["Content-Type", "Authorization"],
     },
 });
+
 
 app.use(express.json())
 

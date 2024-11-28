@@ -1,18 +1,29 @@
-"use client"
+"use client";
+
 function useLocalStorage() {
+    const isBrowser = typeof window !== "undefined";
+
     const setItem = (key: string, value: string) => {
-        localStorage.setItem(key, value)
-    }
+        if (isBrowser) {
+            localStorage.setItem(key, value);
+        }
+    };
 
     const getItem = (key: string) => {
-        return localStorage.getItem(key)
-    }
+        if (isBrowser) {
+            return localStorage.getItem(key);
+        }
+        return null; // Default return value if not in the browser
+    };
 
     const removeItem = (key: string) => {
-        localStorage.removeItem(key)
-    }
+        if (isBrowser) {
+            localStorage.removeItem(key);
+        }
+    };
 
-    return { setItem, getItem, removeItem }
+    return { setItem, getItem, removeItem };
 }
 
-export default useLocalStorage
+export default useLocalStorage;
+    

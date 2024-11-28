@@ -1,4 +1,7 @@
-import { DeepChat } from 'deep-chat-react';
+import dynamic from 'next/dynamic';
+
+// Dynamically import DeepChat and disable SSR for this component
+const DeepChat = dynamic(() => import('deep-chat-react'), { ssr: false });
 
 const AITab = () => {
   return (
@@ -10,8 +13,8 @@ const AITab = () => {
             directConnection={{
               cohere: {
                 key: "4y3lScV2oOUQvkvrspSP0wGLjFruYXE85lC5tV9h",
-                chat: { temperature: 1 }
-              }
+                chat: { temperature: 1 },
+              },
             }}
           />
         </div>
